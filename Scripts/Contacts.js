@@ -5,7 +5,7 @@ $(function () {
         // html внутри контейнера
         content = "",
         // файл с информацией
-        tasksFile = "https://raw.githubusercontent.com/lowkud/Course_Project/main/Contacts.xml";
+        tasksFile = "hhttps://raw.githubusercontent.com/lowkud/Course_Project/main/XML/Contacts.xml";
 
 
     // GET запрос на получение данных из xml файла
