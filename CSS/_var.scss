@@ -1,0 +1,10 @@
+// цвета
+$yellow: rgba(243, 218, 11, 0.8);
+$bg: #281331;
+$smoke: rgba(221, 215, 209, 100%);
+
+// отступы 
+@mixin null_indent {
+    margin: 0;
+    padding: 0;
+}
