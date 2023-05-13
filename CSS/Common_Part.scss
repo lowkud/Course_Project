@@ -1,0 +1,323 @@
+@font-face {
+    font-family: "Retro Gaming";
+    src : url("../Fonts/Retro Gaming.ttf");
+}
+@font-face {
+    font-family: "IBM Plex";
+    src : url("../Fonts/IBMPlexSans-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    background: #281331;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    height: 10%;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(64, 67, 81, 80%);
+    z-index: 1;
+
+    .logo,
+    .title,
+    .nav {
+        display: inline-block;
+    }
+
+    .logo {
+        width: 8%;
+        height: 100%;
+    }
+
+    .title {
+        width: fit-content;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        h1 {
+            font-family: "Retro Gaming";
+            line-height: 90px;
+            vertical-align: middle;
+            text-align: center;
+            height: 100%;
+            color: rgba(174, 220, 182, 100%);
+            font-size: 50px;
+        }
+    }
+
+    .nav {
+        width: 60%;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+
+            li {
+                display: inline-block;
+                text-align: center;
+                list-style: none;
+                width: 20%;
+                height: 40%;
+                background-color: none;
+                border-radius: 40px;
+                padding: 10px 0px 10px 0px;
+                border: 5px solid rgba(221, 215, 209, 100%);
+
+
+                a {
+                    margin: 0;
+                    display: inline-block;
+                    width: 100%;
+                    line-height: 100%;
+                    vertical-align: middle;
+                    font-size: 25px;
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: rgba(221, 215, 209, 100%);
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+
+            }
+        }
+    }
+}
+
+#booking {
+    border: 5px solid rgba(243, 218, 11, 80%);
+    width: 30%;
+
+    #myBtn {
+        color: rgba(243, 218, 11, 80%);
+        font-size: 25px;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+.main {
+    min-height: 0;
+    flex-grow: 1;
+}
+
+.footer {
+    font-family: "IBM Plex";
+    height: 10%;
+    width: 100%;
+    background-color: rgba(64, 67, 81, 80%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .info {
+        width: 50%;
+
+        p {
+            color: rgba(138, 127, 142, 100%);
+            font-size: 20px;
+        }
+    }
+
+    #showModalBtn {
+        padding: 15px 25px 15px 25px;
+        border: 5px solid rgba(243, 218, 11, 80%);
+        color: rgba(243, 218, 11, 80%);
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 40px;
+        background-color: transparent;
+    }
+}
+
+// Фон
+#stars {
+    width: 3px;
+    height: 3px;
+    background:  #A5A5A5;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50%;
+    transform-origin: 0 0;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    animation: rotate 270s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// Адаптивность
+#burger,
+[for=burger] {
+    display: none;
+
+    img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .header {
+        height: 100px;
+
+        .nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            margin-top: 100px;
+
+            ul {
+                background-color: rgba(64, 67, 81, 80%);
+                padding: 15px;
+                border-radius: 50px;
+                flex-direction: column;
+
+                li,
+                #booking {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        .logo {
+            width: 20%;
+        }
+
+        .title {
+            font-size: 30px;
+        }
+    }
+
+    [for=burger] {
+        display: block;
+    }
+
+    #burger:checked+label+.nav {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) and (min-width: 440px) {
+    .header {
+        justify-content: left;
+        max-width: 100%;
+        padding: 10px;
+
+        .logo {
+            width: 20%;
+            margin-right: 10px;
+        }
+
+        .title {
+            width: 50%;
+            margin-right: 10px;
+
+            h1 {
+                width: 100%;
+                margin: 0 auto;
+                font-size: 40px;
+            }
+        }
+
+        [for=burger] {
+            width: 15%;
+        }
+
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 10px;
+
+        .info {
+            margin: 5px auto 5px auto;
+            width: 80%;
+
+            p {
+                color: rgba(138, 127, 142, 100%);
+                font-size: 20px;
+            }
+        }
+
+        #openModalBtn {
+            margin: 5px 0 5px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        .title {
+            width: 50%;
+            margin-right: 10px;
+
+            h1 {
+                width: 100%;
+                margin: 0 auto;
+                font-size: 25px;
+            }
+        }
+        [for=burger] {
+            width: 15%;
+            img {
+                width: 90%;
+            }
+        }
+    }
+    .footer {
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 10px;
+
+        .info {
+            margin: 5px auto 5px auto;
+            width: 80%;
+
+            p {
+                color: rgba(138, 127, 142, 100%);
+                font-size: 20px;
+            }
+        }
+
+        #openModalBtn {
+            margin: 5px 0 5px 0;
+        }
+    }
+}
