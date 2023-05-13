@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MainPage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./CSS/Common_Part.css">
+    <link rel="stylesheet" href="./CSS/MP_style.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/slide_styles.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/Modal_Price.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/Booking.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./CSS/Adaptive_MP.css" /> -->
+</head>
+
+<body>
+    <div class="wrapper">
+    <header class="header">
+            <img src="./IMG/SVG/Logo.svg" alt="Логотип" class="logo">
+            <div class="title">
+                <h1>Game Planet</h1>
+            </div>
+            <input type="checkbox" id="burger">
+            <label for="burger"><img src="./IMG/SVG/menu.png" alt="burger"></label>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./Services.html">Услуги</a></li>
+                    <li><a href="./Discounts.html">Скидки</a></li>
+                    <li><a href="./Games.html">Игры</a></li>
+                    <li id="booking"><button type="button" id="myBtn"><p>Забронировать</p></button></li>
+                </ul>
+            </nav>
+    </header>
+    <main class="main">
+            <section class="content">
+                <img src="./IMG/MP_IMG/Events.png" alt="Объявления" class="events">
+                <div class="paragraphs">
+                    <p>Приглашаем вас посетить наш клуб, здесь вы сможете ознакомиться новинками игровой индустрии, опробовать новейшее железо, найти друзей по интересам, отвлечься от повседневной рутины и просто хорошо провести время. Здесь каждый сможет найти развлечение под себя.
+                    </p>
+                    <p>
+                      Посещение клуба станет не только приятным времяпрепровождением для себя, но и отличным подарком для любителей погорузиться в киберпространсво.
+                    </p>
+                    <p>
+                      Сертификат приобретенный в нашем клубе станет отличным подарком!
+                    </p>
+                </div>
+            </section>
+            <section class="slider__parent">
+                <div class="slider">
+                    <div class="slider__item">
+                        <div><img src="./IMG/MP_IMG/Gallery 1.jpg" alt="gal-1"></div>
+                    </div>
+                    <div class="slider__item">
+                        <div><img src="./IMG/MP_IMG/Gallery 4.jpeg" alt="gal-3"></div>
+                    </div>
+                    <div class="slider__item">
+                        <div><img src="./IMG/MP_IMG/Gallery 4.jpg" alt="gal-4"></div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <table>
+            <caption>
+                <h2>Список цен</h2>
+            </caption>
+            <thead>
+              <tr>
+                <th>Услуга</th>
+                <th>Цена, руб.</th>
+                <th>Время</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Компьютерный зал</td>
+                <td>10</td>
+                <td>7:00 - 19:00</td>
+              </tr>
+              <tr>
+                <td>Комната с консолью</td>
+                <td>12</td>
+                <td>7:00 - 20:00</td>
+              </tr>
+              <tr>
+                <td>Виртуальная реальность</td>
+                <td>15</td>
+                <td>7:00 - 19:30</td>
+              </tr>
+              <tr>
+                <td>Компьютерный зал</td>
+                <td>13</td>
+                <td>19:00 - 7:00</td>
+              </tr>
+              <tr>
+                <td>Комната с консолью</td>
+                <td>15</td>
+                <td>20:00 - 7:00</td>
+              </tr>
+              <tr>
+                <td>Виртуальная реальность</td>
+                <td>17</td>
+                <td>19:30 - 7:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="myMod" class="mod-win">
+        <div class="mod-win-cont">
+         <span class="closeW">&times;</span>
+         <form>
+          <label for="имя">Имя</label>
+          <input type="text" id="имя" name="имя" placeholder="Ваше имя..">
+      
+          <label for="фамилия">Фамилия</label>
+          <input type="text" id="фамилия" name="фамилия" placeholder="Ваша фамилия..">
+      
+          <label for="возраст">Возраст</label>
+          <input type="number" id="возраст" name="возраст" placeholder="Ваш возраст..">
+      
+          <label for="телефон">Номер телефона</label>
+          <input type="tel" id="телефон" name="телефон" placeholder="Ваш номер телефона..">
+      
+          <input type="submit" value="Отправить">
+         </form>
+        </div>
+       </div>
+    <footer class="footer">
+        <div class="info"></div>
+        <button type="button" id="openModalBtnP">Цены на услуги</button>
+    </footer>
+
+    </div>
+    <div id="stars"></div>
+    <script src="./Scripts/bg.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./Scripts/Contacts.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script type="text/javascript" src="./Scripts/slider.js"></script>
+    <script type="text/javascript" src="./Scripts/Booking.js"></script>
+    <script type="text/javascript" src="./Scripts/Modal_price.js"></script>
+</body>
+
+</html>

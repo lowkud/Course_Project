@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Discounts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./CSS/Common_Part.css">
+  <link rel="stylesheet" href="./CSS/Common_Part.css">
+  <link rel="stylesheet" href="./CSS/Games_style.css">
+  <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/slide_styles.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/Modal_Price.css" />
+  <link rel="stylesheet" type="text/css" href="./CSS/Booking.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <img src="./IMG/SVG/Logo.svg" alt="Логотип" class="logo">
+      <div class="title">
+        <h1>Game Planet</h1>
+      </div>
+      <input type="checkbox" id="burger">
+      <label for="burger"><img src="./IMG/SVG/menu.png" alt="burger"></label>
+      <nav class="nav">
+        <ul>
+          <li><a href="./Main Page.html">Главная</a></li>
+          <li><a href="./Services.html">Услуги</a></li>
+          <li><a href="./Discounts.html">Скидки</a></li>
+          <li id="booking"><button type="button" id="myBtn">Забронировать</button></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="slider__parent">
+        <div class="slider">
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/A WAY OUT.jpg" alt="A WAY OUT"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/Atomic Heart.jpeg" alt="Atomic Heart"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/CSGO.jpg" alt="CSGO"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/DOTA 2.jpg" alt="DOTA 2"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/Hogwards.jpg" alt="Hogwards Legacy"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/Overwatch.jpg" alt="Overwatch"></div>
+          </div>
+        </div>
+      </section>
+      <section class="slider__parent">
+        <div class="slider">
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/PUBG.jpg" alt="PUBG"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/Raibow.webp" alt="Raibow Six"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/Rust.webp" alt="RUST"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/War Thunder.webp" alt="War Thunder"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/WC Ref.jpg" alt="WarCraft"></div>
+          </div>
+          <div class="slider__item">
+            <div><img src="./IMG/Games_IMG/Witcher 3.jpg" alt="Witcher 3"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <table>
+          <caption>
+            <h2>Список цен</h2>
+          </caption>
+          <thead>
+            <tr>
+              <th>Услуга</th>
+              <th>Цена, руб.</th>
+              <th>Время</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Компьютерный зал</td>
+              <td>10</td>
+              <td>7:00 - 19:00</td>
+            </tr>
+            <tr>
+              <td>Комната с консолью</td>
+              <td>12</td>
+              <td>7:00 - 20:00</td>
+            </tr>
+            <tr>
+              <td>Виртуальная реальность</td>
+              <td>15</td>
+              <td>7:00 - 19:30</td>
+            </tr>
+            <tr>
+              <td>Компьютерный зал</td>
+              <td>13</td>
+              <td>19:00 - 7:00</td>
+            </tr>
+            <tr>
+              <td>Комната с консолью</td>
+              <td>15</td>
+              <td>20:00 - 7:00</td>
+            </tr>
+            <tr>
+              <td>Виртуальная реальность</td>
+              <td>17</td>
+              <td>19:30 - 7:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div id="myMod" class="mod-win">
+      <div class="mod-win-cont">
+        <span class="closeW">&times;</span>
+        <form>
+          <label for="имя">Имя</label>
+          <input type="text" id="имя" name="имя" placeholder="Ваше имя..">
+
+          <label for="фамилия">Фамилия</label>
+          <input type="text" id="фамилия" name="фамилия" placeholder="Ваша фамилия..">
+
+          <label for="возраст">Возраст</label>
+          <input type="number" id="возраст" name="возраст" placeholder="Ваш возраст..">
+
+          <label for="телефон">Номер телефона</label>
+          <input type="tel" id="телефон" name="телефон" placeholder="Ваш номер телефона..">
+
+          <input type="submit" value="Отправить">
+        </form>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="info"></div>
+      <button type="button" id="openModalBtnP">Цены на услуги</button>
+    </footer>
+  </div>
+  <div id="stars"></div>
+  <script src="./Scripts/bg.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="./Scripts/Contacts.js"></script>
+  <script type="text/javascript" src="./Scripts/Modal_price.js"></script>
+  <script type="text/javascript" src="./Scripts/Booking.js"></script>
+  <script type="text/javascript" src="./Scripts/Serv_Disc.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="./slick/slick.min.js"></script>
+  <script type="text/javascript" src="./Scripts/slider_games.js"></script>
+</body>
+
+</html>

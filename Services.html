@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./CSS/Common_Part.css">
+    <link rel="stylesheet" href="./CSS/Services_style.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/Modal_Price.css" />
+    <link rel="stylesheet" type="text/css" href="./CSS/Booking.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <img src="./IMG/SVG/Logo.svg" alt="Логотип" class="logo">
+            <div class="title">
+                <h1>Game Planet</h1>
+            </div>
+            <input type="checkbox" id="burger">
+            <label for="burger"><img src="./IMG/SVG/menu.png" alt="burger"></label>
+            <nav class="nav">
+                <ul>
+                    <li><a href="./Main Page.html">Главная</a></li>
+                    <li><a href="./Discounts.html">Скидки</a></li>
+                    <li><a href="./Games.html">Игры</a></li>
+                    <li id="booking"><button type="button" id="myBtn">Забронировать</button></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="content">
+                <figure class="img">
+                    <img src="./IMG/Services_IMG/PS.png" alt="PS">
+                </figure>
+                <figcaption class="description">
+                    <ul>В наличие:
+                        <li>PS 5</li>
+                        <li>PS 4</li>
+                        <li>XBOX Series X</li>
+                    </ul>
+                    <ul> Для любителей ретро игр:
+                        <li>Nintendo</li>
+                        <li>Dendy</li>
+                    </ul>
+                </figcaption>
+            </section>
+            <section class="content">
+                <figure class="img">
+                    <img src="./IMG/Services_IMG/PC.png" alt="PC">
+                </figure>
+                <figcaption class="description">
+                    <ul>
+                        <p>Для комфортной игры в наши ПК установлены мощнейшие видеокарты:</p>
+                        <li>RTX 3090</li>
+                        <li>RTX 3080</li>
+                        <li>RTX 3070</li>
+                        <li>RTX 3060</li>
+                    </ul>
+                </figcaption>
+            </section>
+            <section class="content">
+                <figure class="img">
+                    <img src="./IMG/Services_IMG/VR.png" alt="VR">
+                </figure>
+                <figcaption class="description">
+                    <ul>
+                        <p>Все желающие могут опробовать виртуальную реальность:</p>
+                        <li>Oculus Rift S</li>
+                        <li>Oculus Quest</li>
+                        <li>Oculus Quest 2</li>
+                        <li>Sony PlayStation VR</li>
+                    </ul>
+                </figcaption>
+            </section>
+        </main>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <table>
+                <caption>
+                    <h2>Список цен</h2>
+                </caption>
+                <thead>
+                  <tr>
+                    <th>Услуга</th>
+                    <th>Цена, руб.</th>
+                    <th>Время</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Компьютерный зал</td>
+                    <td>10</td>
+                    <td>7:00 - 19:00</td>
+                  </tr>
+                  <tr>
+                    <td>Комната с консолью</td>
+                    <td>12</td>
+                    <td>7:00 - 20:00</td>
+                  </tr>
+                  <tr>
+                    <td>Виртуальная реальность</td>
+                    <td>15</td>
+                    <td>7:00 - 19:30</td>
+                  </tr>
+                  <tr>
+                    <td>Компьютерный зал</td>
+                    <td>13</td>
+                    <td>19:00 - 7:00</td>
+                  </tr>
+                  <tr>
+                    <td>Комната с консолью</td>
+                    <td>15</td>
+                    <td>20:00 - 7:00</td>
+                  </tr>
+                  <tr>
+                    <td>Виртуальная реальность</td>
+                    <td>17</td>
+                    <td>19:30 - 7:00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div id="myMod" class="mod-win">
+            <div class="mod-win-cont">
+             <span class="closeW">&times;</span>
+             <form>
+              <label for="имя">Имя</label>
+              <input type="text" id="имя" name="имя" placeholder="Ваше имя..">
+          
+              <label for="фамилия">Фамилия</label>
+              <input type="text" id="фамилия" name="фамилия" placeholder="Ваша фамилия..">
+          
+              <label for="возраст">Возраст</label>
+              <input type="number" id="возраст" name="возраст" placeholder="Ваш возраст..">
+          
+              <label for="телефон">Номер телефона</label>
+              <input type="tel" id="телефон" name="телефон" placeholder="Ваш номер телефона..">
+          
+              <input type="submit" value="Отправить">
+             </form>
+            </div>
+           </div>
+        <footer class="footer">
+            <div class="info"></div>
+            <button type="button" id="openModalBtnP">Цены на услуги</button>
+        </footer>
+    </div>
+    <div id="stars"></div>
+    <script src="./Scripts/bg.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./Scripts/Contacts.js"></script>
+    <script type="text/javascript" src="./Scripts/Modal_price.js"></script>
+    <script type="text/javascript" src="./Scripts/Booking.js"></script>
+    <script type="text/javascript" src="./Scripts/Serv_Disc.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <script type="text/javascript" src="./Scripts/slider.js"></script>
+</body>
+</html>
